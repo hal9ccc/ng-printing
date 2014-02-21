@@ -1,10 +1,12 @@
-printingApp.controller('DocumentCtrl', function ($scope, $http, $templateCache, jobService) {
+'use strict';
 
-    $scope.$on('doRefresh', function() {
-        $scope.data = jobService.jobData;
-    });
+angular.module('ngPrintingApp')
+.controller('DocumentCtrl', function ($scope, $http, $templateCache, jobProvider) {
+  $scope.$on('doRefresh', function() {
+    $scope.data = jobService.jobData;
+  });
 
-    $scope.orderProp = 'age';
+  $scope.orderProp = 'age';
 });
 
 
