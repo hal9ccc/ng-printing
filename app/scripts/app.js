@@ -25,8 +25,8 @@ var printingApp = angular.module('printingApp', [
             controller: 'AboutCtrl'
         })
         .when('/settings', {
-            templateUrl: 'views/settings.html',
-            controller: 'SettingsCtrl'
+          templateUrl: 'views/settings.html',
+          controller: 'SettingsCtrl'
         })
         .otherwise({
             redirectTo: '/'
@@ -79,3 +79,4 @@ var printingApp = angular.module('printingApp', [
     return jobService;
 });
 
+angular.bootstrap(document.getElementById())
