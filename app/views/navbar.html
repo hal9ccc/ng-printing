@@ -1,0 +1,13 @@
+<div class="header" ng-controller="NavbarCtrl">
+    <ul class="nav nav-pills pull-right">
+        <h3 class="text-muted">angular label print</h3>
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+            <a ng-href="{{item.link}}">{{item.title}}</a>
+        </li>
+        <li><button id="prevbtn" ng-click="prev()"><span class="glyphicon glyphicon-chevron-left"></span></button></li>
+        <li><input type="text" ng-model="jobNr" size="4"/></li>
+        <li><button id="fetchbtn" ng-click="fetch()"><span class="glyphicon glyphicon-refresh"></span></button></li>
+        <li><button id="nextbtn" ng-click="next()"><span class="glyphicon glyphicon-chevron-right"></span></button></li>
+        <li><span> {{status}}</span></li>
+    </ul>
+</div>
