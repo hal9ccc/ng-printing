@@ -16,16 +16,29 @@ angular.module('ngPrintingApp')
 
     // Private constructor
     function JobProvider($injector) {
-      this.rScope       = $injector.get('$rootScope');
-      this.setJobNr     = function (n)  { jobNr = n;              this.broadcastRefresh(); };
-      this.setLastJobNr = function (n)  { lastJobNr = n;          this.broadcastRefresh(); };
-      this.first        = function ()   { jobNr =  firstJobNr;    this.broadcastRefresh(); };
-      this.prev         = function ()   { jobNr--;                this.broadcastRefresh(); };
-      this.next         = function ()   { jobNr++;                this.broadcastRefresh(); };
-      this.last         = function ()   { jobNr =  lastJobNr;     this.broadcastRefresh(); };
 
-      this.jobNr        = function ()   { return jobNr; };
-      this.data         = function ()   { return jobs[jobNr]; };
+      var self = this;
+
+      this.$rootScope   = $injector.get('$rootScope');
+      this.$http        = $injector.get('$http');
+
+      this.jobNr        = function ()   { return jobNr;        };
+      this.data         = function ()   { return jobs[jobNr];  };
+      this.first        = function ()   { return this.setJobNr(firstJobNr); };
+      this.prev         = function ()   { return this.setJobNr(--jobNr);    };
+      this.next         = function ()   { return this.setJobNr(++jobNr);    };
+      this.last         = function ()   { return this.setJobNr(lastJobNr);  };
+
+      this.setLastJobNr = function (n)  { lastJobNr = n;  this.validate(); this.broadcastRefresh(); };
+      this.setFirstJobNr= function (n)  { firstJobNr = n; this.validate(); this.broadcastRefresh(); };
+
+
+      this.setJobNr     = function (n)  {
+        jobNr = n;
+        this.validate();
+        this.loadJob();
+        this.broadcastRefresh();
+      };
 
       this.validate= function() {
         if (jobNr < firstJobNr)   jobNr = firstJobNr;
@@ -34,9 +47,21 @@ angular.module('ngPrintingApp')
         if (!jobNr && lastJobNr)  jobNr = lastJobNr;
       };
 
+      this.loadJob= function() {
+        if (!this.data()) {
+          this.$http.get('jobs/job-'+jobNr+'.json')
+            .success(function(data, status, headers, config) {
+              self.setData(data || "empty", status);
+            })
+            .error(function(data, status, headers, config) {
+              self.setData(data || "Request failed", status);
+            })
+        };
+      }
+
       this.broadcastRefresh = function() {
         this.validate();
-        this.rScope.$broadcast('doRefresh');
+        this.$rootScope.$broadcast('doRefresh');
       };
 
       this.setData = function (data, status) {
@@ -45,12 +70,16 @@ angular.module('ngPrintingApp')
         this.broadcastRefresh();
       };
 
+      this.$http.get('job.json').success(function(data) {
+        self.setLastJobNr(data.nr);
+        self.setJobNr(data.nr);                                                                      ^
+      });
     }
 
     // Public API for configuration
-    this.setJobNr = function (n) {
-      jobNr = n;
-    };
+    //this.setJobNr = function (n) {
+    //  jobNr = n;
+    //};
 
     // Method for instantiating
     this.$get = function ($injector) {
