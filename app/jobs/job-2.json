@@ -10,39 +10,5 @@
         "lnr":   "84",
         "sachnr":"HGSF767576-62",
         "matbez":"Saugmodul"
-    },
-    {
-        "type": "vda",
-        "wenr":  3636637,
-        "wename":  "NISSAN MOTOR IBERICA",
-        "pstnr": 123456789,
-        "lsnr":  1234567,
-        "ttnr":  "F00R753456",
-        "ind":   "ER1",
-        "lnr":   "84",
-        "sachnr":"HGSF767576-62",
-        "matbez":"Saugmodul"
-    },
-    {
-        "type": "hu",
-        "wenr":  3636637,
-        "wename":  "NISSAN MOTOR IBERICA",
-        "pstnr": 123456789,
-        "lsnr":  1234567,
-        "ttnr":  "F00R753456",
-        "ind":   "ER1",
-        "lnr":   "84",
-        "sachnr":"HGSF767576-62",
-        "matbez":"Saugmodul"
-    },
-    {
-        "type": "vda",
-        "pstnr": 123456789,
-        "lsnr":  1234567,
-        "ttnr":  "F00R753456",
-        "ind":   "ER1",
-        "lnr":   "84",
-        "sachnr":"HGSF767576-62",
-        "matbez":"Saugmodul"
     }
 ]

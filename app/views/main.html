@@ -12,26 +12,10 @@
           </button>
           <a class="navbar-brand" href="#">angular printing</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse ">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li>
-
-              <ul ng-controller="NavbarCtrl">
-
-                <ul class="nav navbar-nav pull-right">
-                  <li><a id="firstbtn" ng-click="first()"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
-                  <li><a id="prevbtn"  ng-click="prev()"> <span class="glyphicon glyphicon-step-backward"></span></a></li>
-                  <li><a href="#"><span>{{jobNr}}</span></a></li>
-                  <!--<li><button id="fetchbtn" ng-click="fetch()"><span class="glyphicon glyphicon-refresh"></span></button></li>-->
-                  <li><a id="nextbtn"  ng-click="next()"> <span class="glyphicon glyphicon-step-forward"></span></a></li>
-                  <li><a id="lastbtn"  ng-click="last()"> <span class="glyphicon glyphicon-fast-forward"></span></a></li>
-                </ul>
-
-              </ul>
-
-            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -45,6 +29,14 @@
               </ul>
             </li>
           </ul>
+          <ul class="nav navbar-nav pull-right" ng-controller="NavbarCtrl">
+            <li><a id="firstbtn" ng-click="first()"><span class="glyphicon glyphicon-fast-backward"></span></a></li>
+            <li><a id="prevbtn"  ng-click="prev()"> <span class="glyphicon glyphicon-step-backward"></span></a></li>
+            <li><a href="#"><span>{{jobNr}}</span></a></li>
+            <li><a id="nextbtn"  ng-click="next()"> <span class="glyphicon glyphicon-step-forward"></span></a></li>
+            <li><a id="lastbtn"  ng-click="last()"> <span class="glyphicon glyphicon-fast-forward"></span></a></li>
+            <li><a></a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -52,16 +44,12 @@
   </div>
 </div>
 
-
-
-
-<div class="container">
-  <div ng-controller="DocumentCtrl">
-    <div ng-repeat="doc in jobData">
-      <div ng-include="'templates/label-'+doc.type+'.html'"></div>
-    </div>
-  </div>
+<div ng-controller="DocumentCtrl">
+  <span ng-repeat="doc in jobData">
+    <span ng-include="'templates/label-'+doc.type+'.html'"></span>
+  </span>
 </div>
+
 <div class="footer">
 
 </div>
