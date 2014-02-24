@@ -5,15 +5,21 @@ angular.module('ngPrintingApp')
     return {
       template: '<div>333</div>',
       scope: {
-        v1: '@txt',
-        v2: '=txt',
-        v3: '&txt'
+        callback : '&exampleFunction',
+        v1: '@pstnr',
+        v2: '=pstnr',
+        v3: '&pstnr'
       },      restrict: 'EA',
       link: function postLink(scope, element, attrs) {
         var btype     = 'code39';
         var renderer  = 'css';
         var quietZone = false;
         var t = element[0] ? element[0].innerText : '';
+
+        //var num = scope.$eval(attrs.x-pstnr);
+        console.log('number=',num);
+        scope.callback();  // calls exampleCallback()
+
 
         var num = scope.$eval(attrs.txt);
 

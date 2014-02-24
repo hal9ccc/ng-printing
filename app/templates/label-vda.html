@@ -7,9 +7,10 @@
     </div>
     <div>
         <span class="fld-name">PST-Nr</span>
-        <span class="fld-val"></span>
+        <span class="fld-val">{{label.pstnr}}</span>
 
-        <code39>{{label.pstnr}}</code39>
+        <code39 x-pstnr="label.pstnr" example-function="exampleCallback()" x-pstnr2="{{label.pstnr}}"  x-pstnr3="{{label}}"
+                x-pstnr4="{{1+1}}">{{label.pstnr}}</code39>
 
     </div>
   </div>
