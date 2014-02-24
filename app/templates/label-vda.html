@@ -1,17 +1,18 @@
 <div class="page a5q">
   <div class="vda-label hwa">
     <h2>VDA TEMPLATE</h2>
+
+    <datamatrix value="{{doc.wename}}"/>
+
     <div class="col-lg-2">
         <span class="fld-name">Receptor</span>
-        <span class="fld-val">{{label.wename}}</span>
+        <span class="fld-val">{{doc.wename}}</span>
     </div>
     <div>
         <span class="fld-name">PST-Nr</span>
-        <span class="fld-val">{{label.pstnr}}</span>
+        <span class="fld-val">{{doc.pstnr}}</span>
 
-        <code39 x-pstnr="label.pstnr" example-function="exampleCallback()" x-pstnr2="{{label.pstnr}}"  x-pstnr3="{{label}}"
-                x-pstnr4="{{1+1}}">{{label.pstnr}}</code39>
-
+        <code39 value="{{doc.pstnr}}"/>
     </div>
   </div>
 </div>
