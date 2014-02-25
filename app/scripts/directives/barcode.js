@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ngPrintingApp')
-    .directive('datamatrix', function () {
+    .directive('barcode', function () {
         return {
             template: '<div>333</div>',
             restrict: 'EA',

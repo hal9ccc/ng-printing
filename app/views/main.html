@@ -46,7 +46,7 @@
 
 <div ng-controller="DocumentCtrl">
   <span ng-repeat="doc in jobData">
-    <span ng-include="'templates/label-'+doc.type+'.html'"></span>
+    <span ng-include="'templates/label-'+doc.job.type+'.html'"></span>
   </span>
 </div>
 

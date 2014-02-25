@@ -1,0 +1,22 @@
+<div class="page a4">
+    <div class="vks-diffl">
+        <h2>{{doc.f002}}</h2>
+
+        <datamatrix value="{{doc.wename}}"/>
+
+        <div class="col-lg-2">
+            <span class="fld-name">Receptor</span>
+            <span class="fld-val">{{doc.wename}}</span>
+
+            <barcode type="datamatrix" value="{{doc.wename}}"/>
+        </div>
+        <div>
+            <span class="fld-name">PST-Nr</span>
+            <span class="fld-val">{{doc.pstnr}}</span>
+
+            <barcode type="code39" value="{{doc.pstnr}}"/>
+        </div>
+    </div>
+</div>
+
+
