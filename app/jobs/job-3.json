@@ -1,8 +1,13 @@
 [
   {
-    "type": "vda",
-    "wenr":  3636637,
-    "wename":  "JOB 2 JOB 2 JOB 2 JOB 2",
+      "meta": {
+          "type": "VDA",
+          "createdBy": "Joey Buttafucko",
+          "createdOn": "01.01.2014 11:11:11",
+          "docName": "HWA 222222222"
+      },
+      "wenr": 3636637,
+      "wename":  "JOB 2 JOB 2 JOB 2 JOB 2",
     "pstnr": 2222222222,
     "lsnr":  1234567,
     "ttnr":  "F00R753456",
@@ -12,9 +17,14 @@
     "matbez":"Saugmodul"
   },
   {
-    "type": "vda",
-    "wenr":  3636637,
-    "wename":  "NISSAN MOTOR IBERICA",
+      "meta": {
+          "type": "hu",
+          "createdBy": "Joey Buttafucko",
+          "createdOn": "01.01.2014 11:11:11",
+          "docName": "HWA 222222222"
+      },
+      "wenr": 3636637,
+      "wename":  "NISSAN MOTOR IBERICA",
     "pstnr": 4444444444,
     "lsnr":  1234567,
     "ttnr":  "F00R753456",
@@ -24,9 +34,15 @@
     "matbez":"Saugmodul"
   },
   {
-    "type": "hu",
-    "wenr":  3636637,
-    "wename":  "NISSAN MOTOR IBERICA",
+
+      "meta": {
+          "type": "hu",
+          "createdBy": "Joey Buttafucko",
+          "createdOn": "01.01.2014 11:11:11",
+          "docName": "HU 222222222"
+      },
+      "wenr": 3636637,
+      "wename":  "NISSAN MOTOR IBERICA",
     "pstnr": 666666,
     "lsnr":  1234567,
     "ttnr":  "F00R753456",
@@ -36,9 +52,14 @@
     "matbez":"Saugmodul"
   },
   {
-    "type": "vda",
-    "pstnr": 77777777777777777,
-    "lsnr":  1234567,
+      "meta": {
+          "type": "vda",
+          "createdBy": "Joey Buttafucko",
+          "createdOn": "01.01.2014 11:11:11",
+          "docName": "HWA 222222222"
+      },
+      "pstnr": 77777777777777777,
+      "lsnr":  1234567,
     "ttnr":  "F00R753456",
     "ind":   "ER1",
     "lnr":   "84",

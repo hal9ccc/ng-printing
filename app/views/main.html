@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">angular printing</a>
+            <a class="navbar-brand" href="#">ng-printing</a>
         </div>
         <div class="navbar-collapse collapse ">
           <ul class="nav navbar-nav">
@@ -46,7 +46,7 @@
 
 <div ng-controller="DocumentCtrl">
   <span ng-repeat="doc in jobData">
-    <span ng-include="'templates/label-'+doc.job.type+'.html'"></span>
+    <span ng-include="'templates/doc-'+doc.meta.type+'.html'"></span>
   </span>
 </div>
 

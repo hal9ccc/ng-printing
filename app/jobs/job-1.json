@@ -1,6 +1,11 @@
 [
     {
-        "type": "vda",
+        "meta": {
+            "type": "uwa",
+            "createdBy": "Joey Buttafucko",
+            "createdOn": "01.01.2014 11:11:11",
+            "docName": "UWA 123456789"
+        },
         "wenr":  3636637,
         "wename":  "NISSAN MOTOR IBERICA",
         "pstnr": 123456789,
@@ -12,7 +17,12 @@
         "matbez":"Saugmodul"
     },
     {
-        "type": "uwa",
+        "meta": {
+            "type": "uwa",
+            "createdBy": "Joey Buttafucko",
+            "createdOn": "01.01.2014 11:11:11",
+            "docName": "UWA 123456789"
+        },
         "wenr":  3636637,
         "wename":  "NISSAN MOTOR IBERICA",
         "pstnr": 123456789,
@@ -24,7 +34,12 @@
         "matbez":"Saugmodul"
     },
     {
-        "type": "hu",
+        "meta": {
+            "type": "hu",
+            "createdBy": "Joey Buttafucko",
+            "createdOn": "01.01.2014 11:11:11",
+            "docName": "UWA 123456789"
+        },
         "wenr":  3636637,
         "wename":  "NISSAN MOTOR IBERICA",
         "pstnr": 123456789,
