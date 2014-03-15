@@ -19,15 +19,15 @@ angular.module('ngPrintingApp', [
         //$locationProvider.html5Mode(true);
     })
 
-    .directive('vda', function () {
-        return { templateUrl: 'templates/doc-vda.html' };
-    })
-    .directive('uwa', function () {
-        return { templateUrl: 'templates/doc-uwa.html' };
-    })
-    .directive('hu', function () {
-        return { templateUrl: 'templates/doc-hu.html'  };
-    })
+    /*    .directive('vda', function () {
+     return { templateUrl: 'templates/doc-vda.html' };
+     })
+     .directive('uwa', function () {
+     return { templateUrl: 'templates/doc-uwa.html' };
+     })
+     .directive('hu', function () {
+     return { templateUrl: 'templates/doc-hu.html'  };
+     })*/
 
     .run(function ($rootScope, $http, jobProvider) {
         //$rootScope.someData = {message: "hello"};

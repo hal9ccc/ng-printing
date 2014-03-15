@@ -1,21 +1,14 @@
 <div class="page a4">
     <div class="vks-diffl">
         <h2>{{doc.f002}}</h2>
-
-        <datamatrix value="{{doc.wename}}"/>
-
-        <div class="col-lg-2">
-            <span class="fld-name">Receptor</span>
-            <span class="fld-val">{{doc.wename}}</span>
-
-            <barcode type="datamatrix" value="{{doc.wename}}"/>
-        </div>
-        <div>
-            <span class="fld-name">PST-Nr</span>
-            <span class="fld-val">{{doc.pstnr}}</span>
-
-            <barcode type="code39" value="{{doc.pstnr}}"/>
-        </div>
+        <barcode type="code39" value="{{doc.f008}}"/>
+        <fld type="output" label="doc.f003" value="doc.f007"/>
+        <fld type="output" label="doc.f004" value="doc.f009"/>
+        <fld type="output" label="doc.f005" value="doc.f010 + ' ' + doc.f011"/>
+        <fld type="output" label="doc.f006" value="doc.f012"/>
+        <!--<span ng-repeat="item in doc.items">
+            <span ng-include="'templates/doc-'+doc.meta.type+'.html'"></span>
+        </span>-->
     </div>
 </div>
 
