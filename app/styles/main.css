@@ -29,28 +29,36 @@ body {
 }
 
 .a5q {
-    width: 21cm;
-    height: 14.8cm;
+    width:          21cm;
+    height:         14.8cm;
     background-color: white;
-    margin: 1cm;
-    display: inline-block;
+    margin:         1cm;
+    display:        inline-block;
     vertical-align: middle;
-    float: none;
+    float:          none;
 }
 
 .a4 {
-    width: 21cm;
-    height: 29.6cm;
+    width:          21cm;
+    height:         29.6cm;
     background-color: white;
-    margin: 1cm;
-    display: inline-block;
+    margin:         1cm;
+    display:        inline-block;
     vertical-align: middle;
-    float: none;
+    float:          none;
 }
 
-.vda-label {
+.vks-report {
+    margin: 2cm;
+}
+
+.vks-label {
     border: 1pt solid black;
     margin: 1cm;
-    width: 18cm;
-    height: 12cm;
+    width:  18.5cm;
+    height: 13cm;
+}
+
+.vks-label table > tr {
+    height: 20%;
 }

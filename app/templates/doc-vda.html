@@ -1,21 +1,53 @@
 <div class="page a5q">
-    <div class="vda-label hwa">
-        <h2>VDA TEMPLATE</h2>
+    <div class="vks-label vda-hwa">
+        <table class="table table-condensed" style="height: 100%">
+            <tbody>
+            <tr>
+                <td>(1) Warenempfänger</td>
+                <td>(2) Abladestelle
+                    <barcode type="datamatrix" value="{{doc.pstnr}}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>(3) Lieferscheinnummer
+                </td>
+                <td>
+                    <table class="table table-condensed">
+                        <tbody>
+                        <tr>
+                            <td colspan="3">(4) Lieferanschrift</td>
+                        </tr>
+                        <tr>
+                            <td>(5) Gewicht netto (Kg)</td>
+                            <td>(6) Gewicht brutto (Kg)</td>
+                            <td>(7) Anzahl Packstücke</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-        <datamatrix value="{{doc.wename}}"/>
 
-        <div class="col-lg-2">
-            <span class="fld-name">Receptor</span>
-            <span class="fld-val">{{doc.wename}}</span>
-
-            <barcode type="datamatrix" value="{{doc.wename}}"/>
-        </div>
-        <div>
-            <span class="fld-name">PST-Nr</span>
-            <span class="fld-val">{{doc.pstnr}}</span>
-
-            <barcode type="code39" value="{{doc.pstnr}}"/>
-        </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span class="fld-name">Receptor</span>
+                    <span class="fld-val">{{doc.wename}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="fld-name">PST-Nr</span>
+                    <span class="fld-val">{{doc.pstnr}}</span>
+                    <barcode type="code39" value="{{doc.pstnr}}"/>
+                </td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 

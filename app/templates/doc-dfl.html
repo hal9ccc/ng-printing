@@ -1,14 +1,29 @@
 <div class="page a4">
-    <div class="vks-diffl">
+    <div class="vks-report vks-diffl">
         <h2>{{doc.f002}}</h2>
         <barcode type="code39" value="{{doc.f008}}"/>
         <fld type="output" label="doc.f003" value="doc.f007"/>
         <fld type="output" label="doc.f004" value="doc.f009"/>
         <fld type="output" label="doc.f005" value="doc.f010 + ' ' + doc.f011"/>
         <fld type="output" label="doc.f006" value="doc.f012"/>
-        <!--<span ng-repeat="item in doc.items">
-            <span ng-include="'templates/doc-'+doc.meta.type+'.html'"></span>
-        </span>-->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>TA-Nr.</th>
+                <th>PST-Nr.</th>
+                <th>LS-Nr.</th>
+                <th>Aktion</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in doc.items">
+                <td>{{item.TA}}</td>
+                <td>{{item.PST}}</td>
+                <td>{{item.LSNR}}</td>
+                <td>{{item.AKTION}}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
