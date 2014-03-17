@@ -30,6 +30,8 @@
                             </ul>
                         </li>
                     </ul>
+
+                    <p class="navbar-text">
                     <ul class="nav navbar-nav pull-right" ng-controller="NavbarCtrl">
                         <li><a id="firstbtn" ng-click="first()"><span class="glyphicon glyphicon-fast-backward"></span></a>
                         </li>
@@ -42,15 +44,16 @@
                                 class="glyphicon glyphicon-fast-forward"></span></a></li>
                         <li><a></a></li>
                     </ul>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div ng-controller="DocumentCtrl">
+<div ng-controller="DocumentCtrl" class="text-center">
   <span ng-repeat="doc in jobData">
-      <span ng-include="'templates/doc-'+doc.meta.type+'.html'"></span>
+      <div ng-include="'templates/doc-'+doc.meta.type+'.html'" style="page-break-before:always"></div>
   </span>
 </div>
 

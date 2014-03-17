@@ -1,37 +1,42 @@
 <div class="page a5q">
     <div class="vks-label vda-hwa">
         <table class="table table-condensed" style="height: 100%">
+            <col style="width: 50%">
+            <col style="width: 50%">
             <tbody>
-            <tr>
-                <td>(1) Warenempfänger</td>
-                <td>(2) Abladestelle
+            <tr style="height: 1.8cm">
+                <td>
+                    <span class="fld-name">(1) Warenempfänger</span>
+                    <span class="fld-val">{{doc.wename}}</span>
+                </td>
+                <td><span class="fld-name">(2) Abladestelle</span>
                     <barcode type="datamatrix" value="{{doc.pstnr}}"/>
                 </td>
             </tr>
-            <tr>
-                <td>(3) Lieferscheinnummer
+            <tr style="height: 2cm">
+                <td><span class="fld-name">(3) Lieferscheinnummer</span>
                 </td>
-                <td>
-                    <table class="table table-condensed">
+                <td style="padding: 0">
+                    <table style="margin: 0px; height:100% !important; border: 0px !important;"
+                           class="table table-bordered">
                         <tbody>
                         <tr>
-                            <td colspan="3">(4) Lieferanschrift</td>
+                            <td colspan="3">
+                                <span class="fld-name">(4) Lieferanschrift</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td>(5) Gewicht netto (Kg)</td>
-                            <td>(6) Gewicht brutto (Kg)</td>
-                            <td>(7) Anzahl Packstücke</td>
+                            <td><span class="fld-name">(5) Gewicht netto (Kg)</span></td>
+                            <td><span class="fld-name">(6) Gewicht brutto (Kg)</span></td>
+                            <td><span class="fld-name">(7) Anzahl Packstücke</span></td>
                         </tr>
                         </tbody>
                     </table>
-
-
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <span class="fld-name">Receptor</span>
-                    <span class="fld-val">{{doc.wename}}</span>
+
                 </td>
             </tr>
             <tr>
@@ -42,7 +47,7 @@
                 <td>
                     <span class="fld-name">PST-Nr</span>
                     <span class="fld-val">{{doc.pstnr}}</span>
-                    <barcode type="code39" value="{{doc.pstnr}}"/>
+                    <span class="fld-barcode"><barcode type="code39" value="{{doc.pstnr}}"/></span>
                 </td>
                 <td></td>
             </tr>
