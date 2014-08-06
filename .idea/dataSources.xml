@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4113779378">
+    <data-source source="LOCAL" name="Oracle - xe@192.168.1.105" uuid="c5a2fcdb-b026-40ea-8523-af54b281df26">
+      <driver-ref>oracle</driver-ref>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//192.168.1.105:1521/xe</jdbc-url>
+      <user-name>system</user-name>
+      <user-password>dfd9dfd3dfd9</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
