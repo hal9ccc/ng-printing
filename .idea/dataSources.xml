@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4231037131">
+    <data-source source="LOCAL" name="Oracle - dil_13@scotty1/prj" uuid="19bbf49b-15e7-4017-bc8d-062691855422">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//scotty1:1521/prj</jdbc-url>
+      <user-name>dil_13</user-name>
+      <user-password>dfcedfc3dfc6</user-password>
+      <schema-pattern>*.DIL_13 *.DIL_DATA</schema-pattern>
+      <default-schemas>*.DIL_13</default-schemas>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Oracle - sys@scotty1/prj [2]" uuid="5b882d19-fd92-4bb1-806c-6dd2d8bc33a1">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//scotty1:1521/prj</jdbc-url>
+      <user-name>sys</user-name>
+      <user-password>dfd9dfd3dfd9</user-password>
+      <driver-properties>
+        <property name="internal_logon" value="true" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Oracle - entw@mfc" uuid="00053fd5-8c19-4547-a73f-36575cd2b550">
+      <driver-ref>oracle</driver-ref>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//efwdb2:1521/mfcdb10.efw.corp</jdbc-url>
+      <user-name>entw</user-name>
+      <user-password>dfc3dfc9dfc1dfc6</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

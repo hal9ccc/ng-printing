@@ -12,6 +12,14 @@ angular.module('ngPrintingApp', [
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
     })
+    .when('/job/:jobId', {
+      templateUrl: 'views/main.html',
+      controller: 'JobCtrl'
+    })
+    .when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'AboutCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });

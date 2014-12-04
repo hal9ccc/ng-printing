@@ -2,6 +2,12 @@ body {
     background-color: #dddddd;
 }
 
+thead { display: table-header-group; }
+
+.form-group {
+    margin-bottom: 0px;
+}
+
 .container-full {
     margin: 0 auto;
     width: 100%;
@@ -9,37 +15,107 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+.page {
+    page-break-before: always
+}
+
+@page a5q {
+    size:              8.27in 11.69in;
+    margin:            .5in .5in .5in .5in;
+    mso-header-margin: .5in;
+    mso-footer-margin: .5in;
+    mso-paper-source:  0;
+}
+
+@page a4 {
+    size:              11.69in 16.54in ;
+    margin:            .5in .5in .5in .5in;
+    mso-header-margin: .5in;
+    mso-footer-margin: .5in;
+    mso-paper-source:  0;
 }
 
 .a5q {
-    width: 21cm;
-    height: 14.8cm;
+    page:           a5q;
+    width:          21cm;
+    height:         14.8cm;
     background-color: white;
-    margin: 1cm;
-    display: inline-block;
-    vertical-align:middle;
-    float:  none;
+    margin:         1cm;
+    display:        inline-block;
+    vertical-align: middle;
+    float:          none;
 }
 
+.a4 {
+    page:           a4;
+    width:          21cm;
+    min-height:     29.6cm;
+    background-color: white;
+    margin:         1cm;
+    display:        inline-block;
+    vertical-align: middle;
+    float:          none;
+}
 
-.vda-label {
-    border: 1pt solid black;
+@media screen {
+    .vks-report {
+        margin: 2cm;
+    }
+}
+
+.vks-label.vda-hwa {
+    border: 1.5pt solid black;
     margin: 1cm;
-    width: 18cm;
-    height: 12cm;
+    width:  18.5cm;
+    height: 13cm;
+}
+
+.vks-label.vda-hwa td {
+    padding:        0px !important;
+    border-width:   1.5pt;
+    border-color:   black;
+    vertical-align: sub;
+}
+
+.vks-label.vda-hwa td span {
+    display: inline-block;
+}
+
+.vks-label .fld-name {
+    font-size:   10px;
+    line-height: 12px;
+    padding:     0px 4px;
+    float:       left
+}
+
+.vks-label .fld-val {
+    font-size:   16px;
+    line-height: 30px;
+    padding:     0px 4px;
+    float:       left;
+    clear:       left;
+}
+
+.vks-label .fld-barcode {
+    float: left;
+    clear: left;
 }

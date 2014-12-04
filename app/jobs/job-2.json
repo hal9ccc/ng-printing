@@ -1,14 +1,19 @@
 [
     {
-        "type": "uwa",
-        "wenr":  3636637,
-        "wename":  "JOB 2 JOB 2 JOB 2 JOB 2",
+        "meta": {
+            "type": "uwa",
+            "createdBy": "Joey Buttafucko",
+            "createdOn": "01.01.2014 11:11:11",
+            "docName": "UWA 123456789"
+        },
+        "wenr": 3636637,
+        "wename": "JOB 2 JOB 2 JOB 2 JOB 2",
         "pstnr": 123456789,
-        "lsnr":  1234567,
-        "ttnr":  "F00R753456",
-        "ind":   "ER1",
-        "lnr":   "84",
-        "sachnr":"HGSF767576-62",
-        "matbez":"Saugmodul"
+        "lsnr": 1234567,
+        "ttnr": "F00R753456",
+        "ind": "ER1",
+        "lnr": "84",
+        "sachnr": "HGSF767576-62",
+        "matbez": "Saugmodul"
     }
 ]

@@ -22,19 +22,20 @@ angular.module('ngPrintingApp')
 
       this.$rootScope   = $injector.get('$rootScope');
       this.$http        = $injector.get('$http');
+      this.$location    = $injector.get('$location');
 
       this.jobNr        = function ()   { return jobNr;        };
       this.data         = function ()   { return jobs[jobNr];  };
-      this.first        = function ()   { return this.setJobNr(firstJobNr); };
-      this.prev         = function ()   { return this.setJobNr(--jobNr);    };
-      this.next         = function ()   { return this.setJobNr(++jobNr);    };
-      this.last         = function ()   { return this.setJobNr(lastJobNr);  };
+      this.first        = function ()   { return this.setJobId(firstJobNr); };
+      this.prev         = function ()   { return this.setJobId(--jobNr);    };
+      this.next         = function ()   { return this.setJobId(++jobNr);    };
+      this.last         = function ()   { return this.setJobId(lastJobNr);  };
 
       this.setLastJobNr = function (n)  { lastJobNr = n;  this.validate(); this.broadcastRefresh(); };
       this.setFirstJobNr= function (n)  { firstJobNr = n; this.validate(); this.broadcastRefresh(); };
 
 
-      this.setJobNr     = function (n)  {
+      this.setJobId     = function (n)  {
         jobNr = n;
         this.validate();
         this.loadJob();
@@ -63,6 +64,7 @@ angular.module('ngPrintingApp')
       this.broadcastRefresh = function() {
         this.validate();
         this.$rootScope.$broadcast('doRefresh');
+        this.$location.path('/job/'+jobNr)
       };
 
       this.setData = function (data, numStatus) {
@@ -73,12 +75,12 @@ angular.module('ngPrintingApp')
 
       this.$http.get('job.json').success(function(data) {
         self.setLastJobNr(data.nr);
-        self.setJobNr(data.nr);
+        self.setJobId(data.nr);
       });
     }
 
     // Public API for configuration
-    //this.setJobNr = function (n) {
+    //this.setJobId = function (n) {
     //  jobNr = n;
     //};
 
